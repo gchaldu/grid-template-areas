@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.grid-areas {
+  display: grid;
+  height: 120rem;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "body body aside"
+    "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 25rem 10rem 65rem 20rem;
+  gap: 1rem;
+}
+.header {
+  grid-area: header;
+  background-color: #ff5a5f;
+}
+.nav {
+  grid-area: nav;
+  background-color: #acbfa4;
+}
+
+.body {
+  grid-area: body;
+  background-color: #e2e8ce;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #ff7f11;
+}
+
+.foot {
+  grid-area: footer;
+  background-color: #ff1b1c;
+}

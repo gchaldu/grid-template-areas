@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.grid-areas {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  height: 80rem;
+  grid-template-areas:
+    "imagen1 imagen1 imagen1 imagen2"
+    "imagen3 imagen3 imagen4 imagen4"
+    "imagen5 imagen5 imagen4 imagen4"
+    "imagen6 imagen6 imagen6 imagen6";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 20rem 20rem 20rem 20rem;
+  gap: 1rem;
+}
+.imagen1 {
+  grid-area: imagen1;
+  background-color: #ff5a5f;
+}
+
+.imagen1,
+.imagen2 {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.imagen1 img:hover,
+.imagen2 img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.imagen1 img,
+.imagen2 img,
+.imagen3 img,
+.imagen4 img,
+.imagen5 img,
+.imagen6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imagen2 {
+  grid-area: imagen2;
+  background-color: #acbfa4;
+}
+
+.imagen3 {
+  grid-area: imagen3;
+  background-color: #e2e8ce;
+}
+
+.imagen4 {
+  grid-area: imagen4;
+  background-color: #ff7f11;
+}
+
+.imagen5 {
+  grid-area: imagen5;
+  background-color: #ff1b1c;
+}
+.imagen6 {
+  grid-area: imagen6;
+  background-color: #ff1b1c;
+}
